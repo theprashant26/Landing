@@ -422,7 +422,7 @@ body.modal-open {
     visibility: hidden;
   }
   .footer .footer-bottom .back-to-top-btn a.active.foot-on-bottom.active-plus {
-    opacity: 1;
+    /* opacity: 1; */
     visibility: visible;
     bottom: auto;
     top: -17.5px;
