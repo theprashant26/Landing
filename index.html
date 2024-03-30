@@ -43,6 +43,15 @@
         </div>
         <!-- preloader end -->
         
+        <div class="popup-screen">
+            <div class="popup-box">
+              <i class="fas fa-times close-btn"></i>
+              <h2>Popup Box</h2>
+              <p>Lorem ipsum</p>
+              <a href="https://buyreddyanna.online/" target="_blank" class="btn">Join Us</a>
+            </div>
+          </div>
+
         <!-- header begin -->
         <div class="header animated">
             <div class="mobile-navbar">
@@ -80,14 +89,14 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-2 col-lg-2 d-xl-block d-lg-block d-md-none">
+                                    <div class="col-4 col-lg-2 d-xl-block d-lg-block d-md-none">
                                         <div class="logo">
                                             <a href='index.html'>
                                                 <img src="assets/img/logo/reddyanna.png" alt="">
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col-xl-5 col-lg-5">
+                                    <div class="col-xl-3 col-lg-5">
                                         <ul class="navbar-nav nn-right">
                                             <li class="nav-item dropdown">
                                                 <a class='nav-link' href='contact.html'>contact us</a>
@@ -210,7 +219,7 @@
                                         <li>we recommend is completely secure and trustworthy.</li>
                                         <li>Our customers are our most valued asset.</li>
                                     </ul>
-                                    <a class='prd-btn-1' href='https://wa.me/6206565673'>Get ID <i class="fa-duotone fa-arrow-right"></i></a>
+                                    <a class='prd-btn-1' href='https://wa.me/9831892226'>Get ID <i class="fa-duotone fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -228,6 +237,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
+                <h3 class="text-center" style="color:#fff">*** FOR USERS ABOVE 18+ ONLY ***</h3>
                 <div class="footer-bottom-content">
                     <p class="copyright-text">Copyright © 2023. All Right Reserved By Reddy Anna</p>
                     <ul class="social-link">
@@ -343,7 +353,35 @@
             </div>
         </div>
     </div>
+<script type="text/javascript">
 
+const popupScreen = document.querySelector(".popup-screen");
+    const popupBox = document.querySelector(".popup-box");
+    const closeBtn = document.querySelector(".close-btn");
+
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        popupScreen.classList.add("active");
+      }, 2000); //Popup the screen in 02 seconds after the page is loaded.
+    });
+
+    closeBtn.addEventListener("click", () => {
+      popupScreen.classList.remove("active"); //Close the popup screen on click the close button.
+      //Create a cookie for a day (to expire within a day) on click the close button.
+      document.cookie = "WebsiteName=testWebsite; max-age=" + 24 * 60 * 60; //1 day = 24 hours = 24*60*60
+    });
+
+    //Use the created cookie to hide or show the popup screen.
+    const WebsiteCookie = document.cookie.indexOf("WebsiteName=");
+
+    if(WebsiteCookie != -1){
+      popupScreen.style.display = "none"; //Hide the popup screen if the cookie is not expired.
+    }
+    else{
+      popupScreen.style.display = "flex"; //Show the popup screen if the cookie is expired.
+    }
+
+    </script>
 
         <!-- jQuery js -->
         <script src="assets/js/jquery-3.6.0.min.js"></script>
