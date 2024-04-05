@@ -2496,13 +2496,16 @@ ul {
 .popup-screen.active{
   visibility: visible;
 }
-
+.padd {
+  padding: 20px;
+}
 .popup-box{
   position: relative;
   background: black;
   opacity: 0.6;
   backdrop-filter: blur(10px);
-  max-width: 350px;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2517,7 +2520,7 @@ ul {
 }
 
 .popup-screen.active .popup-box{
-  transform: scale(3);
+  transform: scale(1);
 }
 
 .popup-box h2{
