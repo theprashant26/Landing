@@ -2499,7 +2499,8 @@ ul {
 
 .popup-box{
   position: relative;
-  background: rgba(255, 255, 255, 0.8);
+  background: black;
+  opacity: 0.6;
   backdrop-filter: blur(10px);
   max-width: 350px;
   display: flex;
@@ -2516,7 +2517,7 @@ ul {
 }
 
 .popup-screen.active .popup-box{
-  transform: scale(1);
+  transform: scale(3);
 }
 
 .popup-box h2{
@@ -2532,9 +2533,9 @@ ul {
 
 .popup-box .btn{
   color: #fff;
-  background: red;
+  background: #25D366;
   font-size: 1.1em;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
   padding: 7px 27px;
   border-radius: 4px;
@@ -2544,7 +2545,7 @@ ul {
 
 .popup-box .btn:hover{
   color: #000;
-  background: transparent;
+  /* background: transparent; */
   border: 1px solid #000;
 }
 
